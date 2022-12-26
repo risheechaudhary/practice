@@ -17,7 +17,7 @@ public class SortingUsingStream {
     }
 
     public static List<Integer> sortIntegerListUsingComparator(List<Integer> list){
-        List<Integer> res = list.stream().sorted(Comparator.naturalOrder()).collect(Collectors.toList());
+        List<Integer> res = list.stream().sorted((x, y)->y.compareTo(x)).collect(Collectors.toList());
         return res;
     }
 
