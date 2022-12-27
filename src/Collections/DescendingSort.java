@@ -1,17 +1,15 @@
-package Helper;
+package Collections;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import Helper.Employee;
+
+import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
-
-public class Test {
+public class DescendingSort {
 
     public static List<Double> getSalaryReverse(List<Employee> list) {
 
         List<Employee> collect = list.stream().sorted(Comparator.comparing(Employee::getSalary).reversed()).collect(Collectors.toList());
-
         return collect.stream().map(s -> s.getSalary()).collect(Collectors.toList());
     }
 
@@ -23,9 +21,7 @@ public class Test {
                 new Employee("Sahil", 8753532.3, 233333335, "dotnet"),
                 new Employee("jayesh", 8743876.32, 32986426, "flutter"));
 
-
-        List<Double>list= getSalaryReverse(al);
+        List<Double> list = getSalaryReverse(al);
         System.out.println(list);
-
     }
 }
