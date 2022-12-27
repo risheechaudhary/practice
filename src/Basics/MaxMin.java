@@ -8,7 +8,7 @@ public class MaxNumber {
     public int getMaxInt(List<Integer> list){
 
         int max=0;
-        for (int i = 0; i < list.size()-1; i++) {
+        for (int i = 0; i <=list.size()-1; i++) {
             if(max<list.get(i)){
                 max = list.get(i);
             }
